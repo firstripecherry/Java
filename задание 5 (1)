@@ -1,0 +1,13 @@
+// задание 1
+String s = null;
+    try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in))) {
+        s = reader.readLine();
+        if (s.equals("")) {
+            throw new MyException("строка не может быть пустой!");
+        }
+    } catch (IOException | MyException e) {
+        System.out.println(e.getMessage());
+    }
+    return s;
+}
+// задание 2
